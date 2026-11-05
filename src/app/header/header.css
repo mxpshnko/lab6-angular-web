@@ -1,0 +1,26 @@
+.header {
+    background: #0f766e;
+    color: white;
+    text-align: center;
+}
+
+.header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+.header h1 {
+    margin: 4px 0 8px;
+}
+
+.header p {
+    margin: 0;
+}
+
+.label {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}

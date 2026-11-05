@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="card">
+        <h2>Завдання</h2>
+        <p>
+            Базовий клас: Відрізок (поля: назва, координати).
+            Метод: довжина відрізка.
+        </p>
+        <p>
+            Нащадок: Лінія (поле - колір лінії, n - коефіцієнт збільшення).
+            Зміни в нащадках: збільшення довжини відрізка в n раз.
+        </p>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Відрізок</h3>
+            <label>Назва
+                <input type="text" value="AB" #name1>
+            </label>
+            <label>X1
+                <input type="number" value="0" step="any" #x1>
+            </label>
+            <label>Y1
+                <input type="number" value="0" step="any" #y1>
+            </label>
+            <label>X2
+                <input type="number" value="3" step="any" #x2>
+            </label>
+            <label>Y2
+                <input type="number" value="4" step="any" #y2>
+            </label>
+        </div>
+
+        <div class="card">
+            <h3>Лінія</h3>
+            <label>Назва
+                <input type="text" value="CD" #name2>
+            </label>
+            <label>X1
+                <input type="number" value="0" step="any" #x3>
+            </label>
+            <label>Y1
+                <input type="number" value="0" step="any" #y3>
+            </label>
+            <label>X2
+                <input type="number" value="3" step="any" #x4>
+            </label>
+            <label>Y2
+                <input type="number" value="4" step="any" #y4>
+            </label>
+            <label>Коефіцієнт n
+                <input type="number" value="2" step="any" min="0" #n>
+            </label>
+            <label>Колір
+                <input type="color" value="#14b8a6" #color>
+            </label>
+        </div>
+    </div>
+
+    <button class="btn" (click)="calcSegments(
+        name1.value, x1.value, y1.value, x2.value, y2.value,
+        name2.value, x3.value, y3.value, x4.value, y4.value,
+        color.value, n.value)">
+        <b>Розрахувати</b>
+    </button>
+
+    <div class="card">
+    <h2>Результати обрахунків</h2>
+    <div class="result">{{ segment_show }}</div>
+    <div class="result" [style.border-left-color]="line_color">{{ line_show }}</div>
+    <p class="error">{{ error }}</p>
+  </div>
+</div>
+

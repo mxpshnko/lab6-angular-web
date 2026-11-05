@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card h2,
+.card h3 {
+    margin-top: 0;
+    color: #0f766e;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #475569;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input:focus {
+  outline: 2px solid #14b8a6;
+  border-color: transparent;
+}
+
+input[type="color"] {
+    height: 40px;
+    padding: 2px;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  background: #0f766e;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+    background: #08413d;
+}
+
+.result {
+    margin-top: 12px;
+    padding: 12px 16px;
+    border-left: 20px solid #14b8a6;
+    border-radius: 8px;
+    background: #f8fafc;
+}
+
+.error {
+  color: red;
+  font-weight: 600;
+}
